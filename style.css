@@ -1,0 +1,511 @@
+*{ /* limpiando pagina*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --tituloH1: rgba(243, 114, 204, 0.7);
+    --tituloH2: rgba(255, 254, 255, 0.7);
+    --tituloH3: black;
+    --parrafoCard: black;
+    --parrafoHeader: rgba(243, 114, 204, 0.7);
+    --purple: rgb(56, 8, 56);
+}
+
+header{
+    /* 1º) Posicionamiento */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; 
+    min-width: 20em; /* 320px*/ /* El width no se va a hacer más chico que 320px La dimensión más chica en celulares */
+    height: 27em;  /* 250px = 15.625em*/ /*probar 16em */
+    text-align: center; 
+   /*Temas visuales: Agregamos el fondo difuminado) */
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #6d085e 100%);/*linear-gradient(207.8deg, #201E1C 16.69%, #c0f71a 100%); */
+}
+h1{
+    margin-top: -1.1875em; /*-19px;*/
+    margin-left: 0.2em;
+    font-family: 'Kalam';
+    font-size:5rem;
+    font-weight:lighter;
+    color: var(--tituloH1);
+}
+h3{
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: 'Fjalla One';
+    color: var(--tituloH3);
+}
+#parrafo-header{
+    font-family: 'Bricolage Grotesque';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--parrafoHeader);
+}
+#logo-titulo{
+    margin-top: 0.9375em; /* 15px*/
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#logo-titulo img{
+    
+    width: 6.875em; /*110px*/
+    height: 6.875em; /*110px*/
+    clip-path: circle(50%);
+}
+
+.img-fluid {
+    max-width: 100%; /* limite maximo del 100% para el ancho */
+    width: 100%; /* Hace que la imagen ocupe todo el ancho*/
+}
+
+/* ESTILOS HAMBURGUESA*/
+
+
+
+
+
+/* margen para la cabecera y el main*/
+body {
+    padding-top: 56px; /* ajusta  segun la altura del header */
+}
+
+#personal {
+    width: 50em; 
+    height: 38em;
+    margin-top: 20em; /* ajusta  segun la altura de tu header +  margen adicional  */
+}
+
+#empleado-nuevo{
+    width: 50em; 
+    height: 38em;
+    margin-top: 14em; /* ajusta  segun la altura de tu header +  margen adicional  */
+}
+
+nav{ 
+    font-size: 2rem;
+}
+main p{
+    padding-top: 1em;
+}
+.logo{
+    width: 10em;
+    height: 10em;
+}
+.row-cols-2>* {
+    flex: 0 0 auto;
+    width: 100%;
+}
+.boton-menu{
+    font-size: 1.5rem;
+}
+
+/*Estilos de los grupos contenidos en el desplegable */
+.group-desplegable{
+    padding-left: 0.8em;
+    padding-top: 0.5em;
+}
+.group-desplegable h6{
+    color: #390932;
+    font-weight: bold;
+}
+.group-desplegable a{
+    color: #390932;
+    width: 100%;
+}
+.desplegable-menu{
+    width: 15em;
+    height: 17em;
+    margin-left: 1em;
+}
+
+/*dimensionado transitorio*/
+
+.contenido{
+    height: 650px;
+}
+
+
+/**/
+/*Generando una grilla de 3 filas y dos columnas para que se reparta mejor el contenido*/
+.destacado-semana{
+    padding-top: 20%;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: [x0] 1fr[x1] 1fr[x2];
+    grid-template-rows: [y0] 1fr [y1] 1fr[y2]; /* Peronalizando la primera fila (7em) tendra un valor diferente*/
+    gap: 5em;
+}
+
+/*Personalizando el título 2h de la sección destacados de la semana*/
+.titulo-seccion-cine{
+    font-size: 2.9rem; 
+}
+/*.destacado-semana > [id*='y0'] { /* variando el espacio donde se encuentra el contenido de la celda
+    height: 5em;
+  }/*
+
+  /* nos "desplazamos" y ubicamos en la celda que corresponde a cada card*/
+.card1{
+    grid-column: x0 / x1;
+    grid-row: y0 / y1;
+}
+.card2{
+    grid-column: x1/x2;
+    grid-row: y0 / y1;
+}
+.card3{
+    grid-column: x0 / x1;
+    grid-row: y1 / y2;
+}
+.card4{
+    grid-column: x1 / x2;
+    grid-row: y1 / y2;
+}
+
+/*Estilo para la grilla de series de TV REPETIR EL PROCESO ANTERIOR*-----------------------------------*/
+/*Generando una grilla de 3 filas y dos columnas para que se reparta mejor el contenido*/
+.series{
+    margin-top: 4em;
+    width: 100%;
+    display: grid;
+    grid-template-columns: [x0] 1fr[x1] 1fr[x2];
+    grid-template-rows: [y0] 1fr [y1] 1fr[y2]; /* Peronalizando la primera fila (7em) tendra un valor diferente*/
+    gap: 3em;
+}
+.titulo-seccion-TV{
+    font-size: 2.9rem;
+}
+.series > [id*='y0'] { /* variando el espacio donde se encuentra el contenido de la celda*/
+    height: 5em;
+}
+
+  /* nos "desplazamos" y ubicamos en la celda que corresponde a cada card*/
+.card-TV-1{
+    grid-column: x0 / x1;
+    grid-row: y0 / y1;
+}
+.card-TV-1{
+    grid-column: x1/x2;
+    grid-row: y0 / y1;
+}
+.card-TV-1{
+    grid-column: x0 / x1;
+    grid-row: y2 / y3;
+}
+.card-TV-1{
+    grid-column: x1 / x2;
+    grid-row: y1 / y2;
+}
+
+.caja-estrenos{
+    display: grid;
+    grid-template-columns: [x0] 1fr[x1] 1fr[x2];
+    grid-template-rows: [y0] 1fr[y1] 1fr[y2] 1fr[y3] 1fr[y4];
+    width: 750px;
+    height: 600px;
+    padding-right: 10em;
+    gap: 1.5em;
+}
+
+.imagen-container{
+    grid-column: x0/x1;
+    grid-row: y0/y4;
+}
+.nombres-estreno{
+    grid-column: x1/x2;
+    grid-row: y0/y1;
+}
+.datos{
+    grid-column: x1/x2;
+    grid-row: y1/y2;
+}
+.sinompsis-estreno{
+    grid-column: x1/x2;
+    grid-row: y2/y3;
+}
+.ver-trailer{
+    grid-column: x1/x2;
+    grid-row: y3/y4;
+}    
+.botonTrailer{
+    background-color: #390932;
+    color: white;
+}
+
+
+/* Estilos del ASIDE*/
+#buscar input{
+    padding-left: .5em;
+    margin-right: .5em;
+}
+.boton-buscar{
+background-color: #390932;
+border: none;
+color: white;   
+}
+.fundadores-container{
+background-color: #390932;
+border-top-right-radius: 3em;
+border-bottom-right-radius: 3em;
+}
+.fundadores-container h3{
+font-size: 2.2rem;
+font-weight: bold;
+font-family: 'Bricolage Grotesque';
+color: white;
+}
+.fundadores-container p{
+font-weight: bold;
+font-family: 'Bricolage Grotesque';
+color: white;
+}
+
+#fundadores{
+border-top-right-radius: 10em;
+border-bottom-right-radius: 10em;
+}
+.patrocinadores{
+border: solid 0.1em #390932;
+}
+h4{
+font-weight: bold;
+font-family: 'Bricolage Grotesque';
+color: #390932;
+}
+
+
+/* Estilos del footer*/
+footer{
+    width: 100%;
+    min-width: 20em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5em;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #6d085e 100%); /* 207.8deg*/
+}
+    .social{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding-bottom: 2em;
+    }
+    .contacto-container{
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .contacto-container p{
+        margin-top: 2em;
+        font-size: 1.1rem;
+        font-weight: bold;
+       color: rgba(255, 254, 255, 0.7);
+    }
+    .enlaces ul{
+        list-style: none;
+        padding-left: 0;
+    }
+    .enlaces li{
+        padding-top: 0;
+    }
+    .enlaces li a{
+        text-decoration: none;
+        font-size: 1.2rem;
+       color: rgba(255, 254, 255, 0.7);
+    }
+
+    .contacto ul{
+        padding-left: 0;
+        list-style: none;
+    }
+    .contacto li{
+        padding-top: 0;
+    }
+    .contacto li a{
+        text-decoration: none;
+        font-size: 1.2rem;
+       color: rgba(255, 254, 255, 0.7);
+    }
+    .contacto img{
+        width: 2em;
+        height: 1.5em;
+    }
+
+    
+/*aside oculto en mobile*/
+@media (max-width: 767px){
+#aside{
+    display: none;
+}
+main{
+    width:fit-content;
+}
+.portada{
+    margin-top: 24.5em;
+}
+#logo-titulo img {
+    width: 5em;
+    height:5em;
+    clip-path: circle(50%);
+}
+h1{
+    padding-top: 2em;
+    font-size:4rem !important;
+}
+h2{
+    font-size: 2.5rem !important;
+    font-weight: bold;
+}
+.contenedor-burger{
+    background-color: var(--parrafoHeader);
+    color: #390932;
+}
+main p{
+    padding-top: 0;
+}
+h3{
+    font-size: 2.5rem !important;
+}
+#destacados p{
+    font-size: 1.6rem !important;
+}
+#destacados{
+    padding-top: 0;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+}
+.series{
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.series p{
+    font-size: 1.6rem !important;
+}
+#caja-estrenos{
+    margin-bottom: 29em;
+    padding-right: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#estrenos-inferior{
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 29em;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+}
+
+/*margin para separar el aside del main a partir 768 hasta 1023px tablets*/
+@media (min-width: 768px) and (max-width: 1023px){
+    main{
+        padding-right: 3em;
+    }
+    .col-sm-3{
+        width: 30%;
+    }
+    aside {
+        padding-top: 25em;
+        width: 100%;
+    }
+    .titulo-seccion-cine {
+        padding-top: 0.5em;
+       padding-bottom: 0;
+    }
+    .portada{
+        padding-top: 23em;
+    }
+    #destacados{
+       padding-top: 0;
+       gap: 3em;
+    }
+    .series{
+        margin-top: 0;
+    }
+    #caja-estrenos{
+        margin-bottom: 45em;
+        padding-right: 6em;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    #estrenos-inferior{
+    padding-top: 0;
+    padding-right: 6em;
+    padding-bottom: 0;
+    margin-bottom: 45em;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    }
+/*margin para separar el aside del main a partir 1024px desktop*/
+@media (min-width: 1024px) and (max-width:1440px){
+main{
+    padding-right: 3em;
+}
+.portada{
+    padding-top: 25em;
+}
+aside { 
+    width: 100%;
+    padding-top: 25.5em;
+}
+.titulo-seccion-cine {
+    padding-bottom: 0;
+ }
+#destacados{
+    width: 100%;
+    padding-top: 0;
+}
+.series{
+    margin-top: 0;
+}
+}
+
+@media (min-width:1441px){
+    .portada{
+        padding-top: 24em !important;
+    }
+    .portada h2{
+        padding-top: 0.5em;
+        padding-bottom: 0.2em;
+        font-weight: bold;
+    }
+    #destacados{
+        padding-top: 0;
+        padding-right: 5em;
+    }
+    .series{
+        margin-top: 0;
+    }
+    .mostrar-ocultar h2{
+        margin-top: 0.6em;
+    }
+    aside { 
+        width: 100%;
+        padding-top: 26em;
+    }
+}

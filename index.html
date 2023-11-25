@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon-removebg-preview.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Fjalla+One&family=Kalam&display=swap" rel="stylesheet">   
+    <title>ClicMovie</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="fixed-top">
+        <div id="logo-titulo" class="mb-3 mt-5">
+            <img src="./assets/img/123456-removebg-preview(2).webp" alt="">
+            <h1  id="titulo-principal">ClicMovie</h1>
+        </div>
+        <p class="pb-3" id="parrafo-header">Navegando los mares del séptimo arte.</p>
+          
+            
+        <div class="container-fluid " id="contenedor-hamburguesa">
+                    <!--d-md-block invisible a partir de 768px-->
+                    <nav class="navbar bg-purple d-md-none">              
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                                <div class="collapse mt-3" id="navbarToggleExternalContent" data-bs-theme="dark">
+                                    <div class="contenedor-burger p-4 rounded-3">
+                                        <h4 class="text-center text-body-purple">Quienes somos</h4>
+                                        <span class="text-body-purple">Suscríbete / </span>
+                                        <span class="text-body-purple">Login</span>
+                                    </div>
+                                </div>
+
+                    </nav>
+        </div>
+            
+
+        
+        <div class="row justify-content-center   mt-5">
+            <div class="col-lg-4">
+
+                <!--d-md-block visible a partir de 768px-->
+                <nav class="navbar navbar-expand-lg navbar-dark d-none d-xs-none  d-md-block">
+
+                    <div class="container-fluid justify-content-center">   
+                            <!--Boton inicio-->
+                                <button type="button" class="btn p-3 mx-3 btn-light boton-menu">
+                                    <a href="./index.html">Inicio</a>
+                                </button>
+                                
+        
+                            <!--Boton  Tematicas-->
+                            <div>
+                                <button type="button" id="boton-tematicas" class="btn p-3 mx-3 btn-light dropdown-toggle boton-menu" data-bs-toggle="collapse" data-bs-target="#desplegable-tematicas">
+                                    Temáticas
+                                </button>
+                                <div class="collapse dropdown-menu desplegable-menu"   id="desplegable-tematicas" >
+                                    <div class="group-desplegable">
+                                        <div><h6 class="fs-5 mt-3">Cine</h6></div>
+                                        <a id="enlace-estrenos" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="">Estrenos</a>  <!-- oculta es desplegable al hecer clic--> 
+                                        <a id="enlace-critica" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Crítica</a>  <!-- oculta es desplegable al hecer clic--> 
+                                    </div>
+                                    <!-- la info del desplegable está organizada en dos grupos para que sea mas legible -->
+                                    <div class="group-desplegable">
+                                        <div class="titulo-perfil"><h6 class="fs-5">Televisión</h6></div>
+                                        <a id="enlace-legajo" class="dropdown-item item-legajo fs-5" data-bs-toggle="collapse" data-bs-target="#personal" aria-expanded="false" href="#">Lo último</a>
+                                        <a id="enlace-dni" class="dropdown-item fs-5" href="#">Clásicos de la TV</a>
+                                    </div>
+                                </div>
+        
+                            </div>
+        
+                            <!--Boton  Netflix-->
+                            <div>
+                                <button type="button" id="boton-netflix" class="btn p-3 mx-3 btn-light dropdown-toggle boton-menu" data-bs-toggle="collapse" data-bs-target="#desplegable-netflix">
+                                    Netflix
+                                </button>
+                                <div class="collapse dropdown-menu desplegable-menu"   id="desplegable-netflix" >
+                                        <a id="enlace-cargar" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Series</a>  <!-- oculta es desplegable al hecer clic--> 
+                                        <a id="enlace-cargar" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Películas</a>  <!-- oculta es desplegable al hecer clic--> 
+                                        <a id="enlace-cargar" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Estrenos</a>  <!-- oculta es desplegable al hecer clic--> 
+                                </div>
+                            </div>
+        
+                            <!--Boton Disney+-->
+                            <div>
+                                <button type="button" id="boton-netflix" class="btn p-3 mx-3 btn-light dropdown-toggle boton-menu" data-bs-toggle="collapse" data-bs-target="#desplegable-disney">
+                                    Disney+
+                                </button>
+                                <div class="collapse dropdown-menu desplegable-menu"   id="desplegable-disney" >
+                                        <a id="enlace-series" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Series</a>  <!-- oculta es desplegable al hecer clic--> 
+                                        <a id="enlace-peliculas" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Películas</a>  <!-- oculta es desplegable al hecer clic--> 
+                                        <a id="enlace-estrenos" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Estrenos</a>  <!-- oculta es desplegable al hecer clic--> 
+                                </div>
+                            </div>
+        
+                            <!--Boton suscribirse-->
+                            <button type="button" class="btn p-3 mx-3 btn-light boton-menu">
+                                Suscribirse
+                            </button>
+        
+                            <!--Boton login-->
+                            <button type="button" class="btn p-3 mx-3 btn-light boton-menu">
+                                Login
+                            </button>
+        
+                        
+                     </div>      
+                        
+                  </nav>
+            </div>
+        </div>
+        
+    </header>
+    
+  
+    <div class="container-fluid justify-content-center">
+        <div class="row justify-content-center w-100">
+            <div class="col-12 col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-5 col-xxl-5"> <!--col-md  desde 768px-->
+                <main>
+                    <div class="portada">
+                        <section>
+                             <h2 class=" text-center rounded titulo-seccion-cine">Destacados de la semana</h2>
+                             <div class="destacado-semana" id="destacados">
+                                 <div class="card mt-4 mb-5 card1">
+                                     <a class="text-decoration-none" href=""><h3 class="text-center">Inteligencia Artificial</h3></a>
+                                     <p class="text-center fs-4">Una entidad artificial se descubre como autoconsciente y buscará, hasta el final, la clave para convertirse en humano.</p>
+                                     <a href=""><img src="./assets/img/IA.webp" alt="Imagen de Linda Hamilton" class="img-fluid" ></a>
+                                 </div>
+
+                                 <div class="card mt-4 mb-5 card2">
+                                     <a class="text-decoration-none" href=""><h3 class="text-center">¿Qué fue de Linda Hamilton..?</h3></a>
+                                     <p class="fs-4 text-center">Recordamos a la actriz del mítico personaje Sarah Connor.</p>
+                                     <a href=""><img src="./assets/img/linda hamilton.webp" alt="Imagen de Linda Hamilton" class="img-fluid" ></a>
+                                 </div>
+                                 <div class="card mt-4 mb-5 card3">
+                                     <a class="text-decoration-none" href=""><h3 class="text-center">¡Halloween!</h3></a>
+                                     <p class="fs-4 text-center">Una lista con los clásicos del género de terror.</p>
+                                     <a href=""><img src="./assets/img/freddy-1.webp" alt="Imagen de Freddy Krueger" class="img-fluid"></a>
+                                 </div>
+
+                                 <div class="card mt-4 mb-5 card4">
+                                     <a class="text-decoration-none" href=""><h3 class="text-center">¡Dele gas a la risa!</h3></a>
+                                     <p class="fs-4 text-center">Una recorrida por los vaivenes de la decadencia argentina a través de esta sátira inolvidable.</p>
+                                     <a href=""><img src="./assets/img/OIP.webp" alt="Imagen de una escena de la película argentina esperando la carroza" class="img-fluid"></a>
+                                 </div>
+                             </div>
+                        </section>
+
+                        <section> <!--Series de TV-->
+                            <h2 class="text-center p-3 rounded titulo-seccion-TV">Series de TV</h2>
+                            <div class="series">
+                                    <div class="card mt-4 mb-5 card-TV-1">
+                                        <a class="text-decoration-none" href=""><h3 class="text-center">¡Un visitante algo extravagante!</h3></a>
+                                        <p class="fs-4 text-center">Mork & Mindy, una historia de enredos desopilantes.</p>
+                                        <a href=""><img src="./assets/img/mork y Mindy.webp" alt="Imagen de Mork y Mindy" class="img-fluid" ></a>
+                                    </div>
+                                    <div class="card mt-4 mb-5 card-TV-2">
+                                        <a class="text-decoration-none" href=""><h3 class="text-center">Peaky Blinders</h3></a>
+                                        <p class="fs-4 text-center">Los Shelby siguen creando intrigas entre los usuarios de Netflix.</p>
+                                        <a href=""><img src="./assets/img/61ef.webp" alt="Imagen Thomas Shelby" class="img-fluid"></a>
+                                    </div>
+
+                                    <div class="card mt-4 mb-5 card-TV-3">
+                                        <a class="text-decoration-none" href=""><h3 class="text-center">Millennium</h3></a>
+                                        <p class="fs-4 text-center">Otra interesante propuesta del género de suspenso, de la mano del creador de X-Files Chris Carter.</p>
+                                        <a href=""><img src="./assets/img/millennium.webp" alt="Imagen póster representativo de la serie de TV MILLENNIUM" class="img-fluid"></a>
+                                    </div>
+
+                                    <div class="card mt-4 mb-5 card-TV-4">
+                                        <a class="text-decoration-none" href=""><h3 class="text-center">Millennium</h3></a>
+                                        <p class="fs-4 text-center">Otra interesante propuesta del género de suspenso, de la mano del creador de X-Files Chris Carter.</p>
+                                        <a href=""><img src="./assets/img/millennium.webp" alt="Imagen póster representativo de la serie de TV MILLENNIUM" class="img-fluid"></a>
+                                    </div>     
+                            </div>
+                         
+                        </section>  
+                    </div>
+
+
+                    <!--Secciones de los desplegables del boton tematicas Estrenos-->
+
+                    <section class="cine mostrar-ocultar  d-none mt-5 ">
+                        <h2 id="estrenos" class="p-3 rounded text-center titulo-seccion-cine mb-5" >Estrenos</h2>                      
+                        <div class="caja-estrenos" id="caja-estrenos">
+                            <div class="imagen-container">
+                                <img class="img-fluid" src="./assets/img/estreni1.webp" alt="Imagen poster de presentación de la película estreno Falcon Lake">
+                            </div>
+                            <div class="nombres-estreno">
+                                <p class="fs-2 fw-bold" id="titulo-Pelicula">Título: Falcon Lake</p>
+                                <p class="fs-4" id="info-fechas"> 22 de septiembre de 2023 / Comedia dramática</p>
+                            </div>
+                            <div class="datos">
+                                <p class="fs-4" >Dirigida por <a href="">Choarlotte Le Bon</a></p>
+                                <p class="fs-4" >Reparto: Sara Montpetit, Monia Chokri, Arthur Igual.</p>
+                            </div>
+                                
+                            
+                            <div class="sinompsis-estreno">
+                                <p class="fs-4">Bastien pasa las vacaciones en una cabaña del lago con su familia. Allí se encontrará con Chloé, que le supera en edad pero de la que se enamora. Juntos descubrirán la siniestra leyenda del fantasma del lago.</p>
+                            </div>
+                            <div class="ver-trailer">
+                                <button class="btn btn-lg botonTrailer">Ver trailer</button>
+                            </div>
+                            
+                        </div>
+
+                        <div class="caja-estrenos" id="estrenos-inferior">
+                            <div class="imagen-container">
+                                <img class="img-fluid" src="./assets/img/estreno2.webp" alt="Imagen poster de presentación de la película estreno Golpe a wall street">
+                            </div>
+                            <div class="nombres-estreno">
+                                <p class="fs-2 fw-bold" id="titulo-Pelicula">Título: Golpe a Wall Street</p>
+                                <p class="fs-4" id="info-fechas"> 6 de octubre de 2023 / Drama, Comedia</p>
+                            </div>
+                            <div class="datos">
+                                <p class="fs-4" >Dirigida por <a href="">Craig Gillespie</a></p>
+                                <p class="fs-4">Reparto: Seth Rogen, Sebastian Stan, Paul Dano.</p>
+                            </div>
+                                
+                            
+                            <div class="sinompsis-estreno">
+                                <p class="fs-4">La historia se basa en el caso Gamestop, que generó un terremoto en Wall Street en 2021. En enero de ese mismo año, el mercado sufrió un estrangulamiento a manos de la empresa de video juegos Gamestop, provocando importantes pèrdidas financieras entre los accionistas y la caída de uno de los mayores fondos de alto riesgo</p>
+                            </div>
+                            <div class="ver-trailer">
+                                <button class="btn btn-lg botonTrailer">Ver trailer</button>
+                            </div>
+                            
+                        </div>
+
+                    
+                    </section>
+
+                </main>
+            </div>
+
+
+            <div class="col-sm-3 col-lg-3 col-xl-2 col-xxl-2" id="aside">
+                  <aside>
+                        <div class="mb-5">
+                            <div class="fundadores-container p-4">
+                                <h3>Nuestro Equipo</h3>
+                                <p class="fs-5">Woody & Buzz - Co-Fundadores</p>
+                            </div>
+                            
+                            <img id="fundadores" class="img-fluid" src="./assets/img/toy-story-woody-buzz-1548926608.webp" alt="Imagen de de woody y buzz de la película Toy Story">
+                        </div>
+                
+                        <div class="d-flex" id="buscar">
+                            <input class="form-control me-4 fs-5" type="search" placeholder="Dinos qué buscas" aria-label="Search">
+                            <button class="btn p-3 rounded fs-4 boton-buscar " type="submit">Buscar</button>
+                        </div>
+    
+                        <div class="archivos-container mb-5">
+                            <h4 class="mb-4 mt-5 fs-2">Lo más visto</h4>
+                            <ol class="list-group list-group-numbered fs-4  fs-4 lh-lg">
+                                <a class="list-group-item text-decoration-none text-primary"  href="">10 grandes películas en blanco y negro</a></li>
+                                <a class="list-group-item text-decoration-none text-primary" href="">Cine documental</a>
+                                <a class="list-group-item text-decoration-none text-primary" href="">Cine europeo</a>
+                                <a class="list-group-item text-decoration-none text-primary" href="">Cine latinoamericano</a>
+                                <a class="list-group-item text-decoration-none text-primary" href="">Hollywood de la A a la Z</a>
+                                <a class="list-group-item text-decoration-none text-primary" href="">El papel de la radio en la actualidad </a>
+                                <a class="list-group-item text-decoration-none text-primary" href="">Programas míticos de la radio argentina</a>
+                            </ol>
+        
+                        </div>
+                        <div class="mt-4 mb-4 p-3 rounded patrocinadores">
+                            <h4 class="mb-4 fs-2">Patrocinadores</h4>
+                            <a href="https://www.youtube.com/watch?v=RJSzo1AfBuo"><img class="rounded-2 img-fluid" src="./assets/img/maxresdefault.webp" alt="Imagen de publicidad sobre SEO"></a>
+                            <a href="https://www.cinemamoderne.com/"><img class="img-fluid rounded-3 mt-5" src="./assets/img/CinemaModerne_PBerra_-5.webp" alt="Imagen de la sala de cinema moderno"></a>
+                        </div> 
+                   </aside>
+            </div>
+
+
+        </div>
+    </div>
+                     
+            
+         <div class="container-fluid mt-4 p-3 rounded contenedoFooter">
+            <!--Estructura del Footer, contenido en una segunada fila-->
+            <div class="row">
+                <div class="col-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <footer >
+                        <div class="social">
+                            <a href=""><img src="./assets/img/3138898_square_blue_work_linkedin_job_shadow_linked.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="./assets/img/3138895_shadow_blue_social_facebook_book_media_f.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="./assets/img/3138902_twitter_shadow_social_tweet_media_square_blue.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="./assets/img/3138903_play_red_you_shadow_youtube_tube_square.png" alt="" class="img-fluid"></a>
+                        </div> 
+
+                            <div class="contacto-container">
+                                <div class="enlaces ">
+                                    <p>Enlaces útiles</p>
+                                    <ul>
+                                        <li>
+                                          <a href="">Su cuenta</a>
+                                         </li>
+                                        <li>
+                                         <a href="">Ayuda</a>
+                                        </li>
+                                    </ul>
+                       
+                                </div>
+
+                                <div class="contacto">
+
+                                    <p>Contacto</p>
+                                        <ul>
+                                            <li>
+                                                <a href=""><img src="./assets/img/icons8-home-address-64.png" alt="">Barcelona, C 1001, ES</a>
+                                            </li>
+
+                                            <li>
+                                                <a href=""><img src="./assets/img/icons8-phone-48.png" alt="">+34 93 902 056</a>
+                                            </li>
+                                        </ul>
+                                </div>
+
+                            </div>                  
+                    
+                    </footer>
+                </div>
+            </div>       
+        </div>
+
+
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
