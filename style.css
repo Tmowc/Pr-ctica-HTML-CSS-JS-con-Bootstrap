@@ -16,7 +16,9 @@ html{
     --parrafoHeader: rgba(243, 114, 204, 0.7);
     --purple: rgb(56, 8, 56);
 }
-
+.oculto {
+    display: none !important;
+  }
 header{
     /* 1º) Posicionamiento */
     position: relative;
@@ -283,6 +285,73 @@ font-weight: bold;
 font-family: 'Bricolage Grotesque';
 color: #390932;
 }
+
+
+/*ESTILOS DEL FORM INCRIPCION */
+.formulario label{
+    color: #390932;
+}
+.formulario{
+    width: 30%;
+    margin-top: 32em;
+    display: grid;
+    grid-template-columns: [x0] 0.1fr[x1] 1fr[x2]  0.1fr[x3];
+    grid-template-rows: [y0] 1fr[y1] 0.1fr[y2];
+}
+#logo1{
+    grid-column: x0 / x1;
+    grid-row: y0 / y2;
+    border: solid 0.1em #390932;
+    }
+
+    .logo-container{
+        background-color: #390932;
+        width: 100%;
+        padding: 2em 1em 0 1em;
+    }
+    .logo-container{
+        grid-column: x2 / x3;
+        grid-row: y0 / y2;
+    }
+    #tener-cuenta{
+        padding-left: 12rem;
+        grid-column: x1 / x2;
+        grid-row: y1 / y2;
+        color: #390932;
+        
+    }
+    #sin-cuenta{/*enlace a login*/
+        padding-left: 14.5rem;
+        grid-column: x1 / x2;
+        grid-row: y1 / y2;
+    }
+
+    /* Le cambio el color por defecto al segundo checkbox fijándome en el inspector del navegador*/
+.form-check-input:checked {
+    background-color: #410e43;
+    border-color: #0d6efd;
+    }
+    .form-switch .form-check-input {
+        margin-left: -1.5em;
+    }
+    
+    .form-check-label{
+        margin-left: 0.25em;
+    }
+    #btn-formRegistro{
+        background-color: #390932;
+        color: white;
+        width: 17em;
+        margin-top: 1em; 
+    }
+
+    
+#parrafo-login{/*parrafo login*/
+    padding-left: 9rem;
+    padding-top: 2rem;
+}
+
+
 
 
 /* Estilos del footer*/
