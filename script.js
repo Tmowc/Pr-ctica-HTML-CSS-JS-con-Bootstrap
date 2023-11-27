@@ -1,25 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    
+ 
     /*menu hamburguesa*/
 let desplegableTematicas = document.querySelector('#desplegable-tematicas');
 let desplegableNetflix = document.querySelector('#desplegable-netflix');
 let desplegableDisney = document.querySelector('#desplegable-disney');
 
-let enlaceEstrenos = document.querySelector('#enlace-estrenos');
-let portada = document.querySelector('.portada');
-let aside = document.querySelector('#aside');
-let seccionEstrenos = document.querySelector('.cine');
 
-let formRegistro = document.querySelector('#formulario-registro');
+let enlaceEstrenos = document.querySelector('#enlace-estrenos');
+
+
 let btnSuscribir = document.querySelector('#btn-suscribir');
 let formLogin = document.querySelector('#formulario-login');
 
 desplegableTematicas.addEventListener('mouseleave', ocultarTematicas);
 desplegableNetflix.addEventListener('mouseleave', ocultarNetflix);
 desplegableDisney.addEventListener('mouseleave', ocultarDisney);
-
-
 
 
 //Grupo de fciones. que ocultan los desplegables al dispararse el evento mouseleave
@@ -36,51 +31,46 @@ function ocultarDisney(event) {
     desplegableDisney.classList.remove('show');
 }
 
+//ocultando contenedores
+function ocultarContenedores() {
+    let containerOculto = document.querySelectorAll('.contenedor');
+    containerOculto.forEach(function (container) {
+          container.style.display = "none"; //asignno la clase d-none a cada elemento
+    });
+}
+let ocultar;
+ocultar = ocultarContenedores(); //invoco la fcion. ocultar....
+
+//Mostrar seccion estrenos de cine
 enlaceEstrenos.addEventListener('click', mostrarEstrenos);
-let visibleEstrenos = false;
-function mostrarEstrenos(event) {
-    event.preventDefault();
-    if (!visibleEstrenos) {
-       portada.classList.toggle('oculto');
-       seccionEstrenos.classList.remove('oculto');
-       seccionEstrenos.style.padding = "20em 0 0 0";
-       visibleEstrenos = true;
-    }
-    
-    else{
-        portada.classList.remove('oculto');
-       seccionEstrenos.classList.add('oculto');
-       visibleEstrenos = false;
-    }
-    
-    
+function mostrarEstrenos() {
+     document.getElementById('seccion-estrenos').style.display = "block";
+     document.querySelector('.portada').style.display = "none";
+     document.querySelector('#formulario-registro').style.display = "none";
+     document.getElementById('formulario-login').style.display = "none";
+
 }
 
-//botones de login/registro del navbar
+//Mostrar seccion formulario de inscripcion
 btnSuscribir.addEventListener('click', mostrarSuscripcion);
-let visibleSuscribir = false;
-function mostrarSuscripcion(event) {
-    event.preventDefault();
-    if (!visibleSuscribir) {
-        formRegistro.classList.remove('oculto');
-        portada.classList.add('oculto');
-        seccionEstrenos.classList.add('oculto');
-        aside.classList.add('oculto');
-        visibleSuscribir = true;
-    }
-    else{
-        formRegistro.classList.add('oculto');
-        portada.classList.remove('oculto');
-        seccionEstrenos.classList.remove('oculto');
-        aside.classList.remove('oculto');
-        visibleSuscribir = false;
-    }
-    
+function mostrarSuscripcion() {
+    document.querySelector('#formulario-registro').style.display = "block";
+    document.getElementById('seccion-estrenos').style.display = "none";
+    document.querySelector('.portada').style.display = "none";
+    document.querySelector('#aside').style.display = "none";
 }
 
+//Mostar seccion formulario de login
+document.getElementById('btn-login').addEventListener('click', function () {
+    document.getElementById('formulario-login').style.display = "block";
+    document.querySelector('#formulario-registro').style.display = "none";
+    document.getElementById('seccion-estrenos').style.display = "none";
+    document.querySelector('.portada').style.display = "none";
+    document.querySelector('#aside').style.display = "none";
+});
 
 
-  
+
 });
 
 

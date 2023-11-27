@@ -63,8 +63,8 @@
                                 <div class="collapse dropdown-menu desplegable-menu"   id="desplegable-tematicas" >
                                     <div class="group-desplegable">
                                         <div><h6 class="fs-5 mt-3">Cine</h6></div>
-                                        <a id="enlace-estrenos" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="">Estrenos</a>  <!-- oculta es desplegable al hecer clic--> 
-                                        <a id="enlace-critica" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Crítica</a>  <!-- oculta es desplegable al hecer clic--> 
+                                        <a id="enlace-estrenos" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="#">Estrenos</a>  <!-- oculta es desplegable al hecer clic--> 
+                                        <a id="enlace-critica" class="dropdown-item fs-5 item-cargar" data-bs-toggle="collapse" data-bs-target="#empleado-nuevo" aria-expanded="false" href="">Crítica</a>  <!-- oculta es desplegable al hecer clic--> 
                                     </div>
                                     <!-- la info del desplegable está organizada en dos grupos para que sea mas legible -->
                                     <div class="group-desplegable">
@@ -183,7 +183,7 @@
 
                     <!--Secciones de los desplegables del boton tematicas Estrenos-->
 
-                    <section class="cine mostrar-ocultar  oculto mt-5 ">
+                    <section class="cine contenedor mt-5" id="seccion-estrenos">
                         <h2 id="estrenos" class="p-3 rounded text-center titulo-seccion-cine mb-5" >Estrenos</h2>                      
                         <div class="caja-estrenos" id="caja-estrenos">
                             <div class="imagen-container">
@@ -233,8 +233,8 @@
 
                     </section>
 
-                    <section id="formulario-registro" class="oculto">
-                        <form action="./laRutaDeEnvio" id="form-suscripcion" class="formulario col-12  col-xs-12 col-sm-3 col-lg-5 col-xl-5 col-xxl-5 w-auto" method="post">
+                    <section id="formulario-registro" class="contenedor">
+                        <form action="./laRutaDeEnvio" id="form-suscripcion" class="formulario col-12  col-xs-12 col-sm-3 col-lg-4 col-xl-4 col-xxl-4" method="post">
                             <div  id="logo1" class="text-center logo-container">
                                 
                             </div>
@@ -267,7 +267,7 @@
                         </form>
                     </section>
 
-                    <section id="formulario-login" class="oculto">
+                    <section id="formulario-login" class="contenedor">
                         <form id="login" action="./laRutaDeEnvio" class="formulario col-12  col-xs-12 col-sm-3 col-lg-12 col-xl-5 col-xxl-5 w-auto" method="post">
                             <div  id="logo1" class="text-center logo-container">
                                 

@@ -16,9 +16,7 @@ html{
     --parrafoHeader: rgba(243, 114, 204, 0.7);
     --purple: rgb(56, 8, 56);
 }
-.oculto {
-    display: none !important;
-  }
+
 header{
     /* 1º) Posicionamiento */
     position: relative;
@@ -135,8 +133,13 @@ main p{
 
 .contenido{
     height: 650px;
+    ;
 }
 
+h2{
+    font-family: 'Bricolage Grotesque';
+    font-weight:900
+}
 
 /**/
 /*Generando una grilla de 3 filas y dos columnas para que se reparta mejor el contenido*/
@@ -467,6 +470,9 @@ h3{
 .series p{
     font-size: 1.6rem !important;
 }
+#seccion-estrenos{
+padding-top: 22em;
+}
 #caja-estrenos{
     margin-bottom: 29em;
     padding-right: 0;
@@ -512,31 +518,44 @@ h3{
     .series{
         margin-top: 0;
     }
+    #seccion-estrenos{
+        padding-top: 21em;
+    }
     #caja-estrenos{
-        margin-bottom: 45em;
         padding-right: 6em;
         width: auto;
         display: flex;
         flex-direction: column;
     }
+    #caja-estrenos p{
+        padding: 0;
+    }
     #estrenos-inferior{
-    padding-top: 0;
+    padding-top: 31em;
     padding-right: 6em;
-    padding-bottom: 0;
-    margin-bottom: 45em;
+    padding-bottom: 15em;
+    margin-bottom: 65em;
     width: auto;
     display: flex;
     flex-direction: column;
     }
+    #estrenos-inferior p{
+        padding: 0;
+    }
+
+    footer{
+        margin-top: 5em;
+    }
     
     }
 /*margin para separar el aside del main a partir 1024px desktop*/
-@media (min-width: 1024px) and (max-width:1440px){
-main{
-    padding-right: 3em;
-}
+@media (min-width: 1024px) and (max-width:1439px){
+
 .portada{
     padding-top: 25em;
+}
+#aside{
+    margin-left: 5em;
 }
 aside { 
     width: 100%;
@@ -552,20 +571,57 @@ aside {
 .series{
     margin-top: 0;
 }
+#seccion-estrenos{
+    width: 100%;
+    padding-top: 21em;
+    margin-right: 25em;
 }
 
-@media (min-width:1441px){
+#caja-estrenos{
+    height: auto;
+    row-gap: 0;
+    grid-template-columns: [x0] 1fr[x1] 1fr[x2];
+    grid-template-rows: [y0] 0.2fr[y1] 0.1fr[y2] 0.2fr[y3] 0.5fr[y4];
+    margin-bottom: 10em;
+}
+#caja-estrenos p{
+    padding: 0;
+}
+
+#estrenos-inferior{
+    padding-top: 0;
+    margin-top: 5em;
+    margin-bottom: 9em;
+    grid-template-columns: [x0] 1fr[x1] 1fr[x2];
+    grid-template-rows: [y0] 0.1fr[y1] 0.1fr[y2] 0.2fr[y3] 0.3fr[y4];
+    row-gap: 0;
+}
+
+#ver-trailer{
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 5em;
+}
+
+}
+
+@media (min-width:1440px){
+    main{
+        width: 100%;
+    }
     .portada{
-        padding-top: 24em !important;
+        padding-top: 24em;
+        margin-right: 4em;
     }
     .portada h2{
         padding-top: 0.5em;
-        padding-bottom: 0.2em;
-        font-weight: bold;
+        padding-bottom: 0.5em;
     }
     #destacados{
         padding-top: 0;
         padding-right: 5em;
+        row-gap: 0;
     }
     .series{
         margin-top: 0;
@@ -573,8 +629,42 @@ aside {
     .mostrar-ocultar h2{
         margin-top: 0.6em;
     }
+    #seccion-estrenos{
+        width: 100%;
+        padding-top: 21em;
+        margin-right: 35em;
+    }
+   
+    #caja-estrenos{
+        grid-template-columns: [x0] 1fr[x1] 1fr[x2];
+        grid-template-rows: [y0] 0.2fr[y1] 0.2fr[y2] 0.5fr[y3] 0.4fr[y4];
+        padding-top:0;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2em;
+        row-gap: 0;
+    }
+    #estrenos-inferior{
+        width: 100%;
+        padding-top: 0;
+        padding-top: 0;
+        margin-bottom: 9em;
+    }
     aside { 
         width: 100%;
         padding-top: 26em;
+    }
+    @media (min-width:1800px){
+        #caja-estrenos{
+            margin-bottom: 8em;
+            row-gap: 0;
+        }
+        #formulario-registro{
+            width: 60%;
+        }
+        #formulario-login{
+            width: 60%;
+        }
+
     }
 }
