@@ -48,6 +48,7 @@ function mostrarEstrenos() {
      document.querySelector('.portada').style.display = "none";
      document.querySelector('#formulario-registro').style.display = "none";
      document.getElementById('formulario-login').style.display = "none";
+     document.querySelector('#aside').style.display = "block";
 
 }
 
@@ -69,6 +70,7 @@ document.getElementById('btn-login').addEventListener('click', function () {
     document.querySelector('#aside').style.display = "none";
 });
 
+//Insertando el video del trailer de la película
 
 
 });
