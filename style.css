@@ -661,9 +661,11 @@ aside {
         }
         #formulario-registro{
             width: 60%;
+            margin-left: 17rem;
         }
         #formulario-login{
             width: 60%;
+            margin-left: 13rem;
         }
 
     }

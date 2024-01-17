@@ -11,6 +11,8 @@ let enlaceEstrenos = document.querySelector('#enlace-estrenos');
 
 let btnSuscribir = document.querySelector('#btn-suscribir');
 let formLogin = document.querySelector('#formulario-login');
+let sinCuenta = document.querySelector('#sin-cuenta');
+
 
 desplegableTematicas.addEventListener('mouseleave', ocultarTematicas);
 desplegableNetflix.addEventListener('mouseleave', ocultarNetflix);
@@ -47,19 +49,23 @@ function mostrarEstrenos() {
      document.getElementById('seccion-estrenos').style.display = "block";
      document.querySelector('.portada').style.display = "none";
      document.querySelector('#formulario-registro').style.display = "none";
-     document.getElementById('formulario-login').style.display = "none";
+     document.querySelector('#formulario-login').style.display = "none";
      document.querySelector('#aside').style.display = "block";
 
 }
 
 //Mostrar seccion formulario de inscripcion
 btnSuscribir.addEventListener('click', mostrarSuscripcion);
+
 function mostrarSuscripcion() {
     document.querySelector('#formulario-registro').style.display = "block";
     document.getElementById('seccion-estrenos').style.display = "none";
     document.querySelector('.portada').style.display = "none";
+    document.querySelector('#formulario-login').style.display = 'none';
     document.querySelector('#aside').style.display = "none";
 }
+
+
 
 //Mostar seccion formulario de login
 document.getElementById('btn-login').addEventListener('click', function () {
@@ -74,9 +80,6 @@ document.getElementById('btn-login').addEventListener('click', function () {
 
 
 });
-
-
-
 
 
 
